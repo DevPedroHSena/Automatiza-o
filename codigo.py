@@ -25,7 +25,7 @@ time.sleep(3)
 
 ## fazer login
 pyautogui.click(x=686, y=422)
-pyautogui.write('devpedrosena1@gmai.com')
+pyautogui.write('abcabcabcabc@gmail.com')
 
 pyautogui.press('tab') ## pula para o campo de senha
 pyautogui.write('200909')
