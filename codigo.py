@@ -1,12 +1,8 @@
-# Importando a biblioteca pyautogui
 import pyautogui
 import time
 import pandas
 
 pyautogui.PAUSE = 0.5
-
-## Passo 1 - Abrir o sistema da empresa
-## Sistema: https://dlp.hashtagtreinamentos.com/python/intensivao/login
 
 ## pyautogui.click -> clicar
 ## pyautogui.press -> pressionar
@@ -27,7 +23,7 @@ pyautogui.press('enter') ## apertando enter para acessar a url
 ## pedir pro computador esperar 3s
 time.sleep(3)
 
-## Passo 2 - Fazer login (pode usar qualquer e-mail e senha)
+## fazer login
 pyautogui.click(x=686, y=422)
 pyautogui.write('devpedrosena1@gmai.com')
 
@@ -37,17 +33,16 @@ pyautogui.write('200909')
 pyautogui.press('tab') ## pula para o campo de logar e aperta enter
 pyautogui.press('enter')
 
-## Passo 3 - Importar a base de dados dos produtos
+## importar a base de dados
 tabela = pandas.read_csv('produtos.csv')
 
 print(tabela)
 
 time.sleep(3)
 
-## Passo 4 - Cadastrar um produto
-## Passo 5 - Repetir o passo 4 até acabar todos os produtos
+## Cadastrar um produto
+## Repetir o passo 4 até acabar todos os produtos
 for linha in tabela.index:
-
     pyautogui.click(x=738, y=314)
 
     ## codigo
